@@ -1,0 +1,17 @@
+torch==2.4.0
+transformers==4.41.2
+sentence-transformers==2.7.0
+langchain==0.2.0
+langgraph==0.0.55
+faiss-cpu==1.7.4
+flask==3.0.3
+flask-cors==4.0.1
+pymupdf==1.24.1
+pytesseract==0.3.13
+Pillow==10.3.0
+numpy==1.26.4
+typing-extensions>=4.9.0
+langchain-community==0.2.0
+langchain-huggingface==0.0.3
+scikit-learn
+ollama

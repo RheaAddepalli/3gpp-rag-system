@@ -1,0 +1,31 @@
+# Virtual environments
+venv/
+venv_dco/
+venv_old/
+venv_gai_old/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# IDE / editor files
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# User uploads
+uploads/
+
+# Generated caches
+faiss_cache/
+saved_summaries/
+
+# Windows folder metadata
+desktop.ini
+
+# Source 3GPP PDFs
+dco_mind/datasets/3gpp/ts_138300v190000p.pdf
+dco_mind/datasets/3gpp/ts_138331v150900p.pdf

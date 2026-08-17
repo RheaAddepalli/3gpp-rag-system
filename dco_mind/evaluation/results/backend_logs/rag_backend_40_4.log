@@ -1,0 +1,1763 @@
+
+======================================================================
+QUESTION q001 | RUN 4
+TIME: 2026-08-17 18:23:40
+QUESTION: Which RRC state is the UE in when no RRC connection is established?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Which RRC state is the UE in when no RRC connection is established?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Which RRC state is the UE in when no RRC connection is established?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Which RRC state is the UE in when no RRC connectio' → 8 exact chunks | top score=4
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Which RRC state is the UE in when no RRC connectio' → 8 chunks | top score=0.407
+[Hybrid] 21 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (1) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=9.130 | margin=3.0 | bottom kept=9.130
+[ExactMatch] 'Which RRC state is the UE in when no RRC connectio' → 8 exact chunks | top score=4
+[Protect] Injecting 8 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 16 chunks
+[Recall@16] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='The UE is in RRC_IDLE state when no RRC connection is established.\n\nSource: TS 38.331, Clause 4.2.1'
+[QA] Answer: 'The UE is in RRC_IDLE state when no RRC connection is establ'
+[DEBUG] react_ans before refusal check: repr='The UE is in RRC_IDLE state when no RRC connection is established.\n\nSource: TS 38.331, Clause 4.2.1'
+[Citation Guard] ✅ Citation present and grounded: [('TS 38.331', '4.2.1')]
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='The UE is in RRC_IDLE state when no RRC connection is established.\n\nSource: TS 38.331, Clause 4.2.1'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 4.2.1 | Pages 21-22]\n4.2.1 UE states and state transitions includin'
+[Grounding Fusion] lexical=100.000 semantic=0.748 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='The UE is in RRC_IDLE state when no RRC connection is established.\n\nSource: TS 38.331, Clause 4.2.1'
+question type=<class 'str'> value='Which RRC state is the UE in when no RRC connection is established?'
+context_chunks type=<class 'list'>
+reranker_top=9.1304931640625
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='The UE is in RRC_IDLE state when no RRC connection is established.\n\nSource: TS 38.331, Clause 4.2.1'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 4.2.1 | Pages 21-22]\n4.2.1 UE states and state transitions includin'
+[Confidence] normalized=1.000 rec=1.000 kw=0.875 qa_rel=0.748 → 0.880
+[QA] Done in 133.9s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.880 | decision=accepted
+
+----------------------------------------------------------------------
+END q001 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q002 | RUN 4
+TIME: 2026-08-17 18:25:54
+QUESTION: In RRC_IDLE, does the UE monitor a Paging channel for CN paging using 5G-S-TMSI?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'In RRC_IDLE, does the UE monitor a Paging channel for CN paging using 5G-S-TMSI?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['In RRC_IDLE, does the UE monitor a Paging channel for CN paging using 5G-S-TMSI?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'In RRC_IDLE, does the UE monitor a Paging channel ' → 8 exact chunks | top score=5
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'In RRC_IDLE, does the UE monitor a Paging channel ' → 8 chunks | top score=0.314
+[Hybrid] 13 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (6) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=7.237 | margin=3.0 | bottom kept=4.367
+[ExactMatch] 'In RRC_IDLE, does the UE monitor a Paging channel ' → 8 exact chunks | top score=5
+[Protect] Injecting 2 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 10 chunks
+[Recall@10] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='Yes, in RRC_IDLE, the UE monitors a Paging channel for CN paging using 5G-S-TMSI.\n\nSource: TS 38.300, Clause 16.12.5.6 | Page 218'
+[QA] Answer: 'Yes, in RRC_IDLE, the UE monitors a Paging channel for CN pa'
+[DEBUG] react_ans before refusal check: repr='Yes, in RRC_IDLE, the UE monitors a Paging channel for CN paging using 5G-S-TMSI.\n\nSource: TS 38.300, Clause 16.12.5.6 | Page 218'
+[Citation Guard] ✅ Citation present and grounded: [('TS 38.300', '16.12.5.6')]
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, in RRC_IDLE, the UE monitors a Paging channel for CN paging using 5G-S-TMSI.\n\nSource: TS 38.300, Clause 16.12.5.6 | Page 218'
+context_chunks len=10
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 9.2.4 | Pages 116-122]\n9.2.4 Measurements\n. Both Paging messages an'
+[Grounding Fusion] lexical=95.000 semantic=0.758 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='Yes, in RRC_IDLE, the UE monitors a Paging channel for CN paging using 5G-S-TMSI.\n\nSource: TS 38.300, Clause 16.12.5.6 | Page 218'
+question type=<class 'str'> value='In RRC_IDLE, does the UE monitor a Paging channel for CN paging using 5G-S-TMSI?'
+context_chunks type=<class 'list'>
+reranker_top=7.236607551574707
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, in RRC_IDLE, the UE monitors a Paging channel for CN paging using 5G-S-TMSI.\n\nSource: TS 38.300, Clause 16.12.5.6 | Page 218'
+context_chunks len=10
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 9.2.4 | Pages 116-122]\n9.2.4 Measurements\n. Both Paging messages an'
+[Confidence] normalized=1.000 rec=1.000 kw=0.762 qa_rel=0.758 → 0.868
+[QA] Done in 95.0s | model=llama_direct | grounding=95.0% | recall=100.0% | confidence=0.868 | decision=accepted
+
+----------------------------------------------------------------------
+END q002 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q003 | RUN 4
+TIME: 2026-08-17 18:27:29
+QUESTION: Does the UE store the UE Inactive AS context in RRC_INACTIVE?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does the UE store the UE Inactive AS context in RRC_INACTIVE?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does the UE store the UE Inactive AS context in RRC_INACTIVE?']
+[Hybrid] 7 unique chunks after semantic
+[ExactMatch] 'Does the UE store the UE Inactive AS context in RR' → 8 exact chunks | top score=3
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does the UE store the UE Inactive AS context in RR' → 8 chunks | top score=0.363
+[Hybrid] 20 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (6) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=7.325 | margin=3.0 | bottom kept=4.982
+[ExactMatch] 'Does the UE store the UE Inactive AS context in RR' → 8 exact chunks | top score=3
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.300'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.300'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 9.2.2.5 | Pages 91-93]\n9.2.2.5 RNA update\n. 3. The last serving gNB'
+[Grounding Fusion] lexical=0.000 semantic=0.299 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+question type=<class 'str'> value='Does the UE store the UE Inactive AS context in RRC_INACTIVE?'
+context_chunks type=<class 'list'>
+reranker_top=7.324572563171387
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 9.2.2.5 | Pages 91-93]\n9.2.2.5 RNA update\n. 3. The last serving gNB'
+[Confidence] normalized=1.000 rec=1.000 kw=0.636 qa_rel=0.299 → 0.665
+[QA] Done in 100.4s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.665 | decision=accepted
+
+----------------------------------------------------------------------
+END q003 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q004 | RUN 4
+TIME: 2026-08-17 18:29:09
+QUESTION: Does the UE discard the UE Inactive AS context while remaining in RRC_INACTIVE?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does the UE discard the UE Inactive AS context while remaining in RRC_INACTIVE?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does the UE discard the UE Inactive AS context while remaining in RRC_INACTIVE?']
+[Hybrid] 7 unique chunks after semantic
+[ExactMatch] 'Does the UE discard the UE Inactive AS context whi' → 8 exact chunks | top score=4
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does the UE discard the UE Inactive AS context whi' → 8 chunks | top score=0.338
+[Hybrid] 21 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (5) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=7.217 | margin=3.0 | bottom kept=4.734
+[ExactMatch] 'Does the UE discard the UE Inactive AS context whi' → 8 exact chunks | top score=4
+[Protect] Injecting 7 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 15 chunks
+[Recall@15] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.300'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.300'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 9.2.2.5 | Pages 91-93]\n9.2.2.5 RNA update\n. 3. The last serving gNB'
+[Grounding Fusion] lexical=0.000 semantic=0.299 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+question type=<class 'str'> value='Does the UE discard the UE Inactive AS context while remaining in RRC_INACTIVE?'
+context_chunks type=<class 'list'>
+reranker_top=7.2170000076293945
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 9.2.2.5 | Pages 91-93]\n9.2.2.5 RNA update\n. 3. The last serving gNB'
+[Confidence] normalized=1.000 rec=1.000 kw=0.727 qa_rel=0.299 → 0.679
+[QA] Done in 91.1s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.679 | decision=accepted
+
+----------------------------------------------------------------------
+END q004 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q005 | RUN 4
+TIME: 2026-08-17 18:30:41
+QUESTION: What logical channel is used by SRB0 for RRC messages?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'What logical channel is used by SRB0 for RRC messages?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['What logical channel is used by SRB0 for RRC messages?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'What logical channel is used by SRB0 for RRC messa' → 8 exact chunks | top score=5
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'What logical channel is used by SRB0 for RRC messa' → 8 chunks | top score=0.501
+[Hybrid] 19 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (3) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=8.151 | margin=3.0 | bottom kept=5.163
+[ExactMatch] 'What logical channel is used by SRB0 for RRC messa' → 8 exact chunks | top score=5
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] oracle=0.762 | best_retrieved=0.728 | score=95.6%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='SRB0 uses the CCCH logical channel for RRC messages.\n\nSource: TS 38.331, Clause 4.2.2'
+[QA] Answer: 'SRB0 uses the CCCH logical channel for RRC messages.
+
+Source'
+[DEBUG] react_ans before refusal check: repr='SRB0 uses the CCCH logical channel for RRC messages.\n\nSource: TS 38.331, Clause 4.2.2'
+[Citation Guard] ✅ Citation present and grounded: [('TS 38.331', '4.2.2')]
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='SRB0 uses the CCCH logical channel for RRC messages.\n\nSource: TS 38.331, Clause 4.2.2'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 4.2.2 | Page 23]\n4.2.2 Signalling radio bearers\n"Signalling Radio B'
+[Grounding Fusion] lexical=92.900 semantic=0.741 recall=95.6
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='SRB0 uses the CCCH logical channel for RRC messages.\n\nSource: TS 38.331, Clause 4.2.2'
+question type=<class 'str'> value='What logical channel is used by SRB0 for RRC messages?'
+context_chunks type=<class 'list'>
+reranker_top=8.150522232055664
+recall_score=95.6
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='SRB0 uses the CCCH logical channel for RRC messages.\n\nSource: TS 38.331, Clause 4.2.2'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 4.2.2 | Page 23]\n4.2.2 Signalling radio bearers\n"Signalling Radio B'
+[Confidence] normalized=1.000 rec=0.956 kw=0.786 qa_rel=0.741 → 0.856
+[QA] Done in 93.7s | model=llama_direct | grounding=92.9% | recall=95.6% | confidence=0.856 | decision=accepted
+
+----------------------------------------------------------------------
+END q005 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q006 | RUN 4
+TIME: 2026-08-17 18:32:14
+QUESTION: Does the RRC protocol provide notification of UEs in RRC_IDLE, for example about a mobile terminating call?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does the RRC protocol provide notification of UEs in RRC_IDLE, for example about a mobile terminating call?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does the RRC protocol provide notification of UEs in RRC_IDLE, for example about a mobile terminating call?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Does the RRC protocol provide notification of UEs ' → 8 exact chunks | top score=8
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does the RRC protocol provide notification of UEs ' → 8 chunks | top score=0.553
+[Hybrid] 21 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (1) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=8.001 | margin=3.0 | bottom kept=8.001
+[ExactMatch] 'Does the RRC protocol provide notification of UEs ' → 8 exact chunks | top score=8
+[Protect] Injecting 7 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 15 chunks
+[Recall@15] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='Yes, the RRC protocol provides notification of UEs in RRCIdle, for example about a mobile terminating call.\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]\n\nThis information is supported by the context, which explicitly states that the RRC protocol offers the following services to upper layers: "Notification of UEs in RRCIdle, e.g. about a mobile terminating call;".\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]'
+[QA] Answer: 'Yes, the RRC protocol provides notification of UEs in RRCIdl'
+[DEBUG] react_ans before refusal check: repr='Yes, the RRC protocol provides notification of UEs in RRCIdle, for example about a mobile terminating call.\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]\n\nThis information is supported by the context, which explicitly states that the RRC protocol offers the following services to upper layers: "Notification of UEs in RRCIdle, e.g. about a mobile terminating call;".\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]'
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, the RRC protocol provides notification of UEs in RRCIdle, for example about a mobile terminating call.\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]\n\nThis information is supported by the context, which explicitly states that the RRC protocol offers the following services to upper layers: "Notification of UEs in RRCIdle, e.g. about a mobile terminating call;".\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 4.3.1]\n4.3.1 Services provided to upper layers\nThe RRC protocol off'
+[Grounding Fusion] lexical=89.500 semantic=0.738 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='Yes, the RRC protocol provides notification of UEs in RRCIdle, for example about a mobile terminating call.\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]\n\nThis information is supported by the context, which explicitly states that the RRC protocol offers the following services to upper layers: "Notification of UEs in RRCIdle, e.g. about a mobile terminating call;".\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]'
+question type=<class 'str'> value='Does the RRC protocol provide notification of UEs in RRC_IDLE, for example about a mobile terminating call?'
+context_chunks type=<class 'list'>
+reranker_top=8.000551223754883
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, the RRC protocol provides notification of UEs in RRCIdle, for example about a mobile terminating call.\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]\n\nThis information is supported by the context, which explicitly states that the RRC protocol offers the following services to upper layers: "Notification of UEs in RRCIdle, e.g. about a mobile terminating call;".\n\n[Source: TS 38.331]\n[3GPP Clause 4.3.1]'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 4.3.1]\n4.3.1 Services provided to upper layers\nThe RRC protocol off'
+[Confidence] normalized=1.000 rec=1.000 kw=0.810 qa_rel=0.738 → 0.867
+[QA] Done in 128.2s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.867 | decision=accepted
+
+----------------------------------------------------------------------
+END q006 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q007 | RUN 4
+TIME: 2026-08-17 18:34:23
+QUESTION: Does SRB2 have a lower priority than SRB1?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does SRB2 have a lower priority than SRB1?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does SRB2 have a lower priority than SRB1?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Does SRB2 have a lower priority than SRB1?' → 8 exact chunks | top score=4
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does SRB2 have a lower priority than SRB1?' → 8 chunks | top score=0.208
+[Hybrid] 20 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (3) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=3.292 | margin=3.0 | bottom kept=0.594
+[ExactMatch] 'Does SRB2 have a lower priority than SRB1?' → 8 exact chunks | top score=4
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='Yes, according to [Source: TS 38.300, Clause 5.6.2], SRB2 has a lower priority than SRB1.\n\nSource: TS 38.300, Clause 5.6.2'
+[QA] Answer: 'Yes, according to [Source: TS 38.300, Clause 5.6.2], SRB2 ha'
+[DEBUG] react_ans before refusal check: repr='Yes, according to [Source: TS 38.300, Clause 5.6.2], SRB2 has a lower priority than SRB1.\n\nSource: TS 38.300, Clause 5.6.2'
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, according to [Source: TS 38.300, Clause 5.6.2], SRB2 has a lower priority than SRB1.\n\nSource: TS 38.300, Clause 5.6.2'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 5.6.2]\n5.6.2 Channel Access Priority Classes\nThe Channel Access Pri'
+[Grounding Fusion] lexical=92.900 semantic=0.465 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='Yes, according to [Source: TS 38.300, Clause 5.6.2], SRB2 has a lower priority than SRB1.\n\nSource: TS 38.300, Clause 5.6.2'
+question type=<class 'str'> value='Does SRB2 have a lower priority than SRB1?'
+context_chunks type=<class 'list'>
+reranker_top=3.292144775390625
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, according to [Source: TS 38.300, Clause 5.6.2], SRB2 has a lower priority than SRB1.\n\nSource: TS 38.300, Clause 5.6.2'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 5.6.2]\n5.6.2 Channel Access Priority Classes\nThe Channel Access Pri'
+[Confidence] normalized=1.000 rec=1.000 kw=0.706 qa_rel=0.465 → 0.742
+[QA] Done in 96.4s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.742 | decision=accepted
+
+----------------------------------------------------------------------
+END q007 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q008 | RUN 4
+TIME: 2026-08-17 18:35:59
+QUESTION: What is the purpose of the paging procedure?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'What is the purpose of the paging procedure?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['What is the purpose of the paging procedure?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'What is the purpose of the paging procedure?' → 8 exact chunks | top score=2
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'What is the purpose of the paging procedure?' → 8 chunks | top score=0.374
+[Hybrid] 16 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (1) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=4.232 | margin=3.0 | bottom kept=4.232
+[ExactMatch] 'What is the purpose of the paging procedure?' → 8 exact chunks | top score=2
+[Protect] Injecting 7 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 15 chunks
+[Recall@15] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='The purpose of the paging procedure is to notify a UE of the availability of data or other information.\n\nSource: TS 38.331, Clause 6.2.2'
+[QA] Answer: 'The purpose of the paging procedure is to notify a UE of the'
+[DEBUG] react_ans before refusal check: repr='The purpose of the paging procedure is to notify a UE of the availability of data or other information.\n\nSource: TS 38.331, Clause 6.2.2'
+[Citation Guard] ✅ Citation present and grounded: [('TS 38.331', '6.2.2')]
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='The purpose of the paging procedure is to notify a UE of the availability of data or other information.\n\nSource: TS 38.331, Clause 6.2.2'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 20.2 | Page 277]\n20.2 Paging Collision Avoidance\nThe purpose of pag'
+[Grounding Fusion] lexical=94.700 semantic=0.507 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='The purpose of the paging procedure is to notify a UE of the availability of data or other information.\n\nSource: TS 38.331, Clause 6.2.2'
+question type=<class 'str'> value='What is the purpose of the paging procedure?'
+context_chunks type=<class 'list'>
+reranker_top=4.231533050537109
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='The purpose of the paging procedure is to notify a UE of the availability of data or other information.\n\nSource: TS 38.331, Clause 6.2.2'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 20.2 | Page 277]\n20.2 Paging Collision Avoidance\nThe purpose of pag'
+[Confidence] normalized=1.000 rec=1.000 kw=0.800 qa_rel=0.507 → 0.773
+[QA] Done in 130.1s | model=llama_direct | grounding=94.7% | recall=100.0% | confidence=0.773 | decision=accepted
+
+----------------------------------------------------------------------
+END q008 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q009 | RUN 4
+TIME: 2026-08-17 18:38:09
+QUESTION: When T300 expires, does the UE reset MAC, release the MAC configuration, and re-establish RLC for established RBs?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'When T300 expires, does the UE reset MAC, release the MAC configuration, and re-establish RLC for established RBs?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['When T300 expires, does the UE reset MAC, release the MAC configuration, and re-establish RLC for established RBs?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'When T300 expires, does the UE reset MAC, release ' → 8 exact chunks | top score=8
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'When T300 expires, does the UE reset MAC, release ' → 8 chunks | top score=0.510
+[Hybrid] 18 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (2) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=8.442 | margin=3.0 | bottom kept=5.752
+[ExactMatch] 'When T300 expires, does the UE reset MAC, release ' → 8 exact chunks | top score=8
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='Yes, according to [Source: TS 38.331, Clause 5.3.3.7 | Page 44], when T300 expires, the UE shall:\n\n1> reset MAC, release the MAC configuration and re-establish RLC for all RBs that are established.\n\n[Source: TS 38.331]'
+[QA] Answer: 'Yes, according to [Source: TS 38.331, Clause 5.3.3.7 | Page '
+[DEBUG] react_ans before refusal check: repr='Yes, according to [Source: TS 38.331, Clause 5.3.3.7 | Page 44], when T300 expires, the UE shall:\n\n1> reset MAC, release the MAC configuration and re-establish RLC for all RBs that are established.\n\n[Source: TS 38.331]'
+[Citation Guard] ✅ Citation present and grounded: [('TS 38.331', '5.3.3.7')]
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, according to [Source: TS 38.331, Clause 5.3.3.7 | Page 44], when T300 expires, the UE shall:\n\n1> reset MAC, release the MAC configuration and re-establish RLC for all RBs that are established.\n\n[Source: TS 38.331]'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.3.3.7 | Page 44]\n5.3.3.7 T300 expiry\nThe UE shall: 1> if timer T3'
+[Grounding Fusion] lexical=96.600 semantic=0.648 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='Yes, according to [Source: TS 38.331, Clause 5.3.3.7 | Page 44], when T300 expires, the UE shall:\n\n1> reset MAC, release the MAC configuration and re-establish RLC for all RBs that are established.\n\n[Source: TS 38.331]'
+question type=<class 'str'> value='When T300 expires, does the UE reset MAC, release the MAC configuration, and re-establish RLC for established RBs?'
+context_chunks type=<class 'list'>
+reranker_top=8.442401885986328
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, according to [Source: TS 38.331, Clause 5.3.3.7 | Page 44], when T300 expires, the UE shall:\n\n1> reset MAC, release the MAC configuration and re-establish RLC for all RBs that are established.\n\n[Source: TS 38.331]'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.3.3.7 | Page 44]\n5.3.3.7 T300 expiry\nThe UE shall: 1> if timer T3'
+[Confidence] normalized=1.000 rec=1.000 kw=0.848 qa_rel=0.648 → 0.837
+[QA] Done in 102.9s | model=llama_direct | grounding=96.6% | recall=100.0% | confidence=0.837 | decision=accepted
+
+----------------------------------------------------------------------
+END q009 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q010 | RUN 4
+TIME: 2026-08-17 18:39:52
+QUESTION: When going to RRC_IDLE, does the UE reset MAC?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'When going to RRC_IDLE, does the UE reset MAC?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['When going to RRC_IDLE, does the UE reset MAC?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'When going to RRC_IDLE, does the UE reset MAC?' → 8 exact chunks | top score=2
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'When going to RRC_IDLE, does the UE reset MAC?' → 8 chunks | top score=0.342
+[Hybrid] 19 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (1) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=8.792 | margin=3.0 | bottom kept=8.792
+[ExactMatch] 'When going to RRC_IDLE, does the UE reset MAC?' → 8 exact chunks | top score=2
+[Protect] Injecting 7 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 15 chunks
+[Recall@15] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='Yes, the UE shall reset MAC.\n\nSource: TS 38.331, Clause 5.3.11'
+[QA] Answer: 'Yes, the UE shall reset MAC.
+
+Source: TS 38.331, Clause 5.3.'
+[DEBUG] react_ans before refusal check: repr='Yes, the UE shall reset MAC.\n\nSource: TS 38.331, Clause 5.3.11'
+[Citation Guard] ✅ Citation present and grounded: [('TS 38.331', '5.3.11')]
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, the UE shall reset MAC.\n\nSource: TS 38.331, Clause 5.3.11'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.3.11]\n5.3.11 UE actions upon going to RRC_IDLE\nThe UE shall: 1> r'
+[Grounding Fusion] lexical=91.700 semantic=0.323 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='Yes, the UE shall reset MAC.\n\nSource: TS 38.331, Clause 5.3.11'
+question type=<class 'str'> value='When going to RRC_IDLE, does the UE reset MAC?'
+context_chunks type=<class 'list'>
+reranker_top=8.792001724243164
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, the UE shall reset MAC.\n\nSource: TS 38.331, Clause 5.3.11'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.3.11]\n5.3.11 UE actions upon going to RRC_IDLE\nThe UE shall: 1> r'
+[Confidence] normalized=1.000 rec=1.000 kw=0.636 qa_rel=0.323 → 0.675
+[QA] Done in 132.1s | model=llama_direct | grounding=91.7% | recall=100.0% | confidence=0.675 | decision=accepted
+
+----------------------------------------------------------------------
+END q010 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q011 | RUN 4
+TIME: 2026-08-17 18:42:04
+QUESTION: Is the purpose of RRC connection resume to resume a suspended RRC connection, including resuming SRBs and DRBs, or perform an RNA update?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Is the purpose of RRC connection resume to resume a suspended RRC connection, including resuming SRBs and DRBs, or perform an RNA update?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Is the purpose of RRC connection resume to resume a suspended RRC connection, including resuming SRBs and DRBs, or perform an RNA update?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Is the purpose of RRC connection resume to resume ' → 8 exact chunks | top score=12
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Is the purpose of RRC connection resume to resume ' → 8 chunks | top score=0.466
+[Hybrid] 17 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (2) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=6.935 | margin=3.0 | bottom kept=4.324
+[ExactMatch] 'Is the purpose of RRC connection resume to resume ' → 8 exact chunks | top score=12
+[Protect] Injecting 5 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 13 chunks
+[Recall@13] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.331'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.331'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.331'
+context_chunks len=13
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.3.1.1 | Page 38]\n5.3.1.1 RRC connection control\n. The RRC connect'
+[Grounding Fusion] lexical=0.000 semantic=0.238 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.331'
+question type=<class 'str'> value='Is the purpose of RRC connection resume to resume a suspended RRC connection, including resuming SRBs and DRBs, or perform an RNA update?'
+context_chunks type=<class 'list'>
+reranker_top=6.9345831871032715
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.331'
+context_chunks len=13
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.3.1.1 | Page 38]\n5.3.1.1 RRC connection control\n. The RRC connect'
+[Confidence] normalized=1.000 rec=1.000 kw=0.636 qa_rel=0.238 → 0.641
+[QA] Done in 97.5s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.641 | decision=accepted
+
+----------------------------------------------------------------------
+END q011 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q012 | RUN 4
+TIME: 2026-08-17 18:43:42
+QUESTION: Does TS 38.300 define an NG-RAN node as only a gNB?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does TS 38.300 define an NG-RAN node as only a gNB?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does TS 38.300 define an NG-RAN node as only a gNB?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Does TS 38.300 define an NG-RAN node as only a gNB' → 8 exact chunks | top score=21
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does TS 38.300 define an NG-RAN node as only a gNB' → 8 chunks | top score=0.408
+[Hybrid] 22 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (3) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=6.865 | margin=3.0 | bottom kept=4.410
+[ExactMatch] 'Does TS 38.300 define an NG-RAN node as only a gNB' → 8 exact chunks | top score=21
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] oracle=0.730 | best_retrieved=0.719 | score=98.4%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.300'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.300'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 4 | Pages 28-30]\n4 Overall Architecture and Functional Split\n4.1 Ov'
+[Grounding Fusion] lexical=0.000 semantic=0.316 recall=98.4
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+question type=<class 'str'> value='Does TS 38.300 define an NG-RAN node as only a gNB?'
+context_chunks type=<class 'list'>
+reranker_top=6.865487575531006
+recall_score=98.4
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 4 | Pages 28-30]\n4 Overall Architecture and Functional Split\n4.1 Ov'
+[Confidence] normalized=1.000 rec=0.984 kw=0.727 qa_rel=0.316 → 0.682
+[QA] Done in 108.1s | model=llama_direct | grounding=98.4% | recall=98.4% | confidence=0.682 | decision=accepted
+
+----------------------------------------------------------------------
+END q012 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q013 | RUN 4
+TIME: 2026-08-17 18:45:30
+QUESTION: Is NG-U defined between the NG-RAN node and the AMF?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Is NG-U defined between the NG-RAN node and the AMF?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Is NG-U defined between the NG-RAN node and the AMF?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Is NG-U defined between the NG-RAN node and the AM' → 8 exact chunks | top score=5
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Is NG-U defined between the NG-RAN node and the AM' → 8 chunks | top score=0.524
+[Hybrid] 22 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (2) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=8.445 | margin=3.0 | bottom kept=5.554
+[ExactMatch] 'Is NG-U defined between the NG-RAN node and the AM' → 8 exact chunks | top score=5
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.300'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.300'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 4.3.1.1]\n4.3.1.1 NG User Plane\nThe NG user plane interface (NG-U) i'
+[Grounding Fusion] lexical=0.000 semantic=0.279 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+question type=<class 'str'> value='Is NG-U defined between the NG-RAN node and the AMF?'
+context_chunks type=<class 'list'>
+reranker_top=8.445112228393555
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 4.3.1.1]\n4.3.1.1 NG User Plane\nThe NG user plane interface (NG-U) i'
+[Confidence] normalized=1.000 rec=1.000 kw=0.727 qa_rel=0.279 → 0.671
+[QA] Done in 92.4s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.671 | decision=accepted
+
+----------------------------------------------------------------------
+END q013 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q014 | RUN 4
+TIME: 2026-08-17 18:47:02
+QUESTION: Does NG-U provide guaranteed delivery of user-plane PDUs?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does NG-U provide guaranteed delivery of user-plane PDUs?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does NG-U provide guaranteed delivery of user-plane PDUs?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Does NG-U provide guaranteed delivery of user-plan' → 8 exact chunks | top score=4
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does NG-U provide guaranteed delivery of user-plan' → 8 chunks | top score=0.494
+[Hybrid] 17 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (2) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=8.836 | margin=3.0 | bottom kept=7.967
+[ExactMatch] 'Does NG-U provide guaranteed delivery of user-plan' → 8 exact chunks | top score=4
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] oracle=0.633 | best_retrieved=0.579 | score=91.5%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.300, Clause 4.3.1.1'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.300, Clause 4.3.1.1'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300, Clause 4.3.1.1'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 4.3.1.1]\n4.3.1.1 NG User Plane\nThe NG user plane interface (NG-U) i'
+[Grounding Fusion] lexical=0.000 semantic=0.302 recall=91.5
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300, Clause 4.3.1.1'
+question type=<class 'str'> value='Does NG-U provide guaranteed delivery of user-plane PDUs?'
+context_chunks type=<class 'list'>
+reranker_top=8.835906982421875
+recall_score=91.5
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.300, Clause 4.3.1.1'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 4.3.1.1]\n4.3.1.1 NG User Plane\nThe NG user plane interface (NG-U) i'
+[Confidence] normalized=1.000 rec=0.915 kw=0.692 qa_rel=0.302 → 0.657
+[QA] Done in 96.7s | model=llama_direct | grounding=91.5% | recall=91.5% | confidence=0.657 | decision=accepted
+
+----------------------------------------------------------------------
+END q014 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q015 | RUN 4
+TIME: 2026-08-17 18:48:39
+QUESTION: Is the Xn-U interface defined between two NG-RAN nodes?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Is the Xn-U interface defined between two NG-RAN nodes?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Is the Xn-U interface defined between two NG-RAN nodes?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Is the Xn-U interface defined between two NG-RAN n' → 8 exact chunks | top score=6
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Is the Xn-U interface defined between two NG-RAN n' → 8 chunks | top score=0.463
+[Hybrid] 19 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (2) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=9.512 | margin=3.0 | bottom kept=8.697
+[ExactMatch] 'Is the Xn-U interface defined between two NG-RAN n' → 8 exact chunks | top score=6
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='Yes, the Xn-U interface is defined between two NG-RAN nodes.\n\nSource: TS 38.300, Clause 4.3.2.1'
+[QA] Answer: 'Yes, the Xn-U interface is defined between two NG-RAN nodes.'
+[DEBUG] react_ans before refusal check: repr='Yes, the Xn-U interface is defined between two NG-RAN nodes.\n\nSource: TS 38.300, Clause 4.3.2.1'
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, the Xn-U interface is defined between two NG-RAN nodes.\n\nSource: TS 38.300, Clause 4.3.2.1'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 4.3.2.1]\n4.3.2.1 Xn User Plane\nThe Xn User plane (Xn-U) interface i'
+[Grounding Fusion] lexical=93.300 semantic=0.642 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='Yes, the Xn-U interface is defined between two NG-RAN nodes.\n\nSource: TS 38.300, Clause 4.3.2.1'
+question type=<class 'str'> value='Is the Xn-U interface defined between two NG-RAN nodes?'
+context_chunks type=<class 'list'>
+reranker_top=9.512210845947266
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, the Xn-U interface is defined between two NG-RAN nodes.\n\nSource: TS 38.300, Clause 4.3.2.1'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 4.3.2.1]\n4.3.2.1 Xn User Plane\nThe Xn User plane (Xn-U) interface i'
+[Confidence] normalized=1.000 rec=1.000 kw=0.800 qa_rel=0.642 → 0.827
+[QA] Done in 145.8s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.827 | decision=accepted
+
+----------------------------------------------------------------------
+END q015 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q016 | RUN 4
+TIME: 2026-08-17 18:51:05
+QUESTION: In RRC_INACTIVE, is paging initiated by the 5GC rather than NG-RAN?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'In RRC_INACTIVE, is paging initiated by the 5GC rather than NG-RAN?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['In RRC_INACTIVE, is paging initiated by the 5GC rather than NG-RAN?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'In RRC_INACTIVE, is paging initiated by the 5GC ra' → 8 exact chunks | top score=3
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'In RRC_INACTIVE, is paging initiated by the 5GC ra' → 8 chunks | top score=0.425
+[Hybrid] 16 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (7) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=4.620 | margin=3.0 | bottom kept=3.014
+[ExactMatch] 'In RRC_INACTIVE, is paging initiated by the 5GC ra' → 8 exact chunks | top score=3
+[Protect] Injecting 5 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 13 chunks
+[Recall@13] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='No, in RRC_INACTIVE, paging is initiated by NG-RAN.\n\nSource: TS 38.300, Clause 6.12.1 | Page 73\n\nThis statement is directly supported by the provided context.'
+[QA] Answer: 'No, in RRC_INACTIVE, paging is initiated by NG-RAN.
+
+Source:'
+[DEBUG] react_ans before refusal check: repr='No, in RRC_INACTIVE, paging is initiated by NG-RAN.\n\nSource: TS 38.300, Clause 6.12.1 | Page 73\n\nThis statement is directly supported by the provided context.'
+[Citation Guard] ✅ Citation present and grounded: [('TS 38.300', '6.12.1')]
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='No, in RRC_INACTIVE, paging is initiated by NG-RAN.\n\nSource: TS 38.300, Clause 6.12.1 | Page 73\n\nThis statement is directly supported by the provided context.'
+context_chunks len=13
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 6.12.1 | Page 73]\n6.12.1 Asymmetric DL single-TRP and UL multi-TRP\n'
+[Grounding Fusion] lexical=86.400 semantic=0.586 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='No, in RRC_INACTIVE, paging is initiated by NG-RAN.\n\nSource: TS 38.300, Clause 6.12.1 | Page 73\n\nThis statement is directly supported by the provided context.'
+question type=<class 'str'> value='In RRC_INACTIVE, is paging initiated by the 5GC rather than NG-RAN?'
+context_chunks type=<class 'list'>
+reranker_top=4.61965274810791
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='No, in RRC_INACTIVE, paging is initiated by NG-RAN.\n\nSource: TS 38.300, Clause 6.12.1 | Page 73\n\nThis statement is directly supported by the provided context.'
+context_chunks len=13
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 6.12.1 | Page 73]\n6.12.1 Asymmetric DL single-TRP and UL multi-TRP\n'
+[Confidence] normalized=1.000 rec=1.000 kw=0.696 qa_rel=0.586 → 0.789
+[QA] Done in 119.1s | model=llama_direct | grounding=86.4% | recall=100.0% | confidence=0.789 | decision=accepted
+
+----------------------------------------------------------------------
+END q016 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q017 | RUN 4
+TIME: 2026-08-17 18:53:04
+QUESTION: In RRC_CONNECTED, is the UE AS context stored only in the UE?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'In RRC_CONNECTED, is the UE AS context stored only in the UE?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['In RRC_CONNECTED, is the UE AS context stored only in the UE?']
+[Hybrid] 7 unique chunks after semantic
+[ExactMatch] 'In RRC_CONNECTED, is the UE AS context stored only' → 8 exact chunks | top score=3
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'In RRC_CONNECTED, is the UE AS context stored only' → 8 chunks | top score=0.268
+[Hybrid] 19 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (6) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=7.109 | margin=3.0 | bottom kept=4.291
+[ExactMatch] 'In RRC_CONNECTED, is the UE AS context stored only' → 8 exact chunks | top score=3
+[Protect] Injecting 7 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 15 chunks
+[Recall@15] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value="According to TS 38.300, Clause 21.2.4, the UE AS configuration for the QoE is stored in the UE Inactive AS context when the UE enters RRC_INACTIVE state. However, when the UE transitions from RRC_IDLE to RRC_CONNECTED, the gNB should ensure that it does not release an already configured signalling-based QoE measurement configuration for the sake of configuring a new management-based QoE measurement configuration.\n\nThis implies that the UE AS context is not solely stored in the UE in RRC_CONNECTED state, but rather the gNB also retains some information about the UE's QoE configuration.\n\nSource: TS 38.300, Clause 21.2.4 | Page 280"
+[QA] Answer: 'According to TS 38.300, Clause 21.2.4, the UE AS configurati'
+[DEBUG] react_ans before refusal check: repr="According to TS 38.300, Clause 21.2.4, the UE AS configuration for the QoE is stored in the UE Inactive AS context when the UE enters RRC_INACTIVE state. However, when the UE transitions from RRC_IDLE to RRC_CONNECTED, the gNB should ensure that it does not release an already configured signalling-based QoE measurement configuration for the sake of configuring a new management-based QoE measurement configuration.\n\nThis implies that the UE AS context is not solely stored in the UE in RRC_CONNECTED state, but rather the gNB also retains some information about the UE's QoE configuration.\n\nSource: TS 38.300, Clause 21.2.4 | Page 280"
+[Citation Guard] ✅ Citation present and grounded: [('TS 38.300', '21.2.4')]
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value="According to TS 38.300, Clause 21.2.4, the UE AS configuration for the QoE is stored in the UE Inactive AS context when the UE enters RRC_INACTIVE state. However, when the UE transitions from RRC_IDLE to RRC_CONNECTED, the gNB should ensure that it does not release an already configured signalling-based QoE measurement configuration for the sake of configuring a new management-based QoE measurement configuration.\n\nThis implies that the UE AS context is not solely stored in the UE in RRC_CONNECTED state, but rather the gNB also retains some information about the UE's QoE configuration.\n\nSource: TS 38.300, Clause 21.2.4 | Page 280"
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 21.2.4 | Page 280]\n21.2.4 QoE Measurement Handling in RRC_IDLE and '
+[Grounding Fusion] lexical=87.300 semantic=0.854 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value="According to TS 38.300, Clause 21.2.4, the UE AS configuration for the QoE is stored in the UE Inactive AS context when the UE enters RRC_INACTIVE state. However, when the UE transitions from RRC_IDLE to RRC_CONNECTED, the gNB should ensure that it does not release an already configured signalling-based QoE measurement configuration for the sake of configuring a new management-based QoE measurement configuration.\n\nThis implies that the UE AS context is not solely stored in the UE in RRC_CONNECTED state, but rather the gNB also retains some information about the UE's QoE configuration.\n\nSource: TS 38.300, Clause 21.2.4 | Page 280"
+question type=<class 'str'> value='In RRC_CONNECTED, is the UE AS context stored only in the UE?'
+context_chunks type=<class 'list'>
+reranker_top=7.109379768371582
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value="According to TS 38.300, Clause 21.2.4, the UE AS configuration for the QoE is stored in the UE Inactive AS context when the UE enters RRC_INACTIVE state. However, when the UE transitions from RRC_IDLE to RRC_CONNECTED, the gNB should ensure that it does not release an already configured signalling-based QoE measurement configuration for the sake of configuring a new management-based QoE measurement configuration.\n\nThis implies that the UE AS context is not solely stored in the UE in RRC_CONNECTED state, but rather the gNB also retains some information about the UE's QoE configuration.\n\nSource: TS 38.300, Clause 21.2.4 | Page 280"
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 21.2.4 | Page 280]\n21.2.4 QoE Measurement Handling in RRC_IDLE and '
+[Confidence] normalized=1.000 rec=1.000 kw=0.812 qa_rel=0.854 → 0.913
+[QA] Done in 153.3s | model=llama_direct | grounding=87.3% | recall=100.0% | confidence=0.913 | decision=accepted
+
+----------------------------------------------------------------------
+END q017 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q018 | RUN 4
+TIME: 2026-08-17 18:55:37
+QUESTION: Does the MIB contain cell barred status information and essential physical-layer information needed to receive further system information?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does the MIB contain cell barred status information and essential physical-layer information needed to receive further system information?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does the MIB contain cell barred status information and essential physical-layer information needed to receive further system information?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Does the MIB contain cell barred status informatio' → 8 exact chunks | top score=11
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does the MIB contain cell barred status informatio' → 8 chunks | top score=0.206
+[Hybrid] 19 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (1) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=8.064 | margin=3.0 | bottom kept=8.064
+[ExactMatch] 'Does the MIB contain cell barred status informatio' → 8 exact chunks | top score=11
+[Protect] Injecting 6 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 14 chunks
+[Recall@14] oracle=0.578 | best_retrieved=0.569 | score=98.4%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='Yes, the MIB contains cell barred status information and essential physical layer information of the cell required to receive further system information, e.g. CORESET#0 configuration.\n\nSource: TS 38.300, Clause 7.3.1'
+[QA] Answer: 'Yes, the MIB contains cell barred status information and ess'
+[DEBUG] react_ans before refusal check: repr='Yes, the MIB contains cell barred status information and essential physical layer information of the cell required to receive further system information, e.g. CORESET#0 configuration.\n\nSource: TS 38.300, Clause 7.3.1'
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, the MIB contains cell barred status information and essential physical layer information of the cell required to receive further system information, e.g. CORESET#0 configuration.\n\nSource: TS 38.300, Clause 7.3.1'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 7.3 | Pages 74-77]\n7.3 System Information Handling\n7.3.1 Overview S'
+[Grounding Fusion] lexical=96.000 semantic=0.643 recall=98.4
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='Yes, the MIB contains cell barred status information and essential physical layer information of the cell required to receive further system information, e.g. CORESET#0 configuration.\n\nSource: TS 38.300, Clause 7.3.1'
+question type=<class 'str'> value='Does the MIB contain cell barred status information and essential physical-layer information needed to receive further system information?'
+context_chunks type=<class 'list'>
+reranker_top=8.063972473144531
+recall_score=98.4
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, the MIB contains cell barred status information and essential physical layer information of the cell required to receive further system information, e.g. CORESET#0 configuration.\n\nSource: TS 38.300, Clause 7.3.1'
+context_chunks len=14
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 7.3 | Pages 74-77]\n7.3 System Information Handling\n7.3.1 Overview S'
+[Confidence] normalized=1.000 rec=0.984 kw=0.889 qa_rel=0.643 → 0.837
+[QA] Done in 1552.5s | model=llama_direct | grounding=98.4% | recall=98.4% | confidence=0.837 | decision=accepted
+
+----------------------------------------------------------------------
+END q018 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q019 | RUN 4
+TIME: 2026-08-17 19:21:30
+QUESTION: Is SIB1 also referred to as Remaining Minimum SI (RMSI)?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Is SIB1 also referred to as Remaining Minimum SI (RMSI)?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Is SIB1 also referred to as Remaining Minimum SI (RMSI)?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Is SIB1 also referred to as Remaining Minimum SI (' → 2 exact chunks | top score=5
+[Hybrid] 2 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Is SIB1 also referred to as Remaining Minimum SI (' → 8 chunks | top score=0.485
+[Hybrid] 14 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (2) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=0.607 | margin=3.0 | bottom kept=-0.168
+[ExactMatch] 'Is SIB1 also referred to as Remaining Minimum SI (' → 2 exact chunks | top score=5
+[Protect] Injecting 1 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 9 chunks
+[Recall@9] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='Yes, SIB1 is also referred to as Remaining Minimum SI (RMSI).\n\nSource: TS 38.331, Clause 5.1.3\nSource: TS 38.300, Clause 7.3.1'
+[QA] Answer: 'Yes, SIB1 is also referred to as Remaining Minimum SI (RMSI)'
+[DEBUG] react_ans before refusal check: repr='Yes, SIB1 is also referred to as Remaining Minimum SI (RMSI).\n\nSource: TS 38.331, Clause 5.1.3\nSource: TS 38.300, Clause 7.3.1'
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, SIB1 is also referred to as Remaining Minimum SI (RMSI).\n\nSource: TS 38.331, Clause 5.1.3\nSource: TS 38.300, Clause 7.3.1'
+context_chunks len=9
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.1.3 | Page 26]\n5.1.3 Requirements for UE in MR-DC\n. SIB1 is cell-'
+[Grounding Fusion] lexical=94.100 semantic=0.483 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='Yes, SIB1 is also referred to as Remaining Minimum SI (RMSI).\n\nSource: TS 38.331, Clause 5.1.3\nSource: TS 38.300, Clause 7.3.1'
+question type=<class 'str'> value='Is SIB1 also referred to as Remaining Minimum SI (RMSI)?'
+context_chunks type=<class 'list'>
+reranker_top=0.6065049171447754
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='Yes, SIB1 is also referred to as Remaining Minimum SI (RMSI).\n\nSource: TS 38.331, Clause 5.1.3\nSource: TS 38.300, Clause 7.3.1'
+context_chunks len=9
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.1.3 | Page 26]\n5.1.3 Requirements for UE in MR-DC\n. SIB1 is cell-'
+[Confidence] normalized=1.000 rec=1.000 kw=0.722 qa_rel=0.483 → 0.752
+[QA] Done in 71.6s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.752 | decision=accepted
+
+----------------------------------------------------------------------
+END q019 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q020 | RUN 4
+TIME: 2026-08-17 19:22:41
+QUESTION: Does the BAP sublayer use configured mapping to derive an egress BH RLC channel from the ingress BH RLC channel when routing a packet from ingress to egress?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does the BAP sublayer use configured mapping to derive an egress BH RLC channel from the ingress BH RLC channel when routing a packet from ingress to egress?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does the BAP sublayer use configured mapping to derive an egress BH RLC channel from the ingress BH RLC channel when routing a packet from ingress to egress?']
+[Hybrid] 2 unique chunks after semantic
+[ExactMatch] 'Does the BAP sublayer use configured mapping to de' → 8 exact chunks | top score=11
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does the BAP sublayer use configured mapping to de' → 8 chunks | top score=0.790
+[Hybrid] 9 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (4) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=4.086 | margin=3.0 | bottom kept=1.547
+[ExactMatch] 'Does the BAP sublayer use configured mapping to de' → 8 exact chunks | top score=11
+[Protect] Injecting 1 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 9 chunks
+[Recall@9] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\n[Source: TS 38.300]'
+[QA] Answer: 'This information is not present in the document.
+
+[Source: T'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\n[Source: TS 38.300]'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.300]'
+context_chunks len=9
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 6.11.3 | Pages 70-71]\n6.11.3 Routing, BAP Header Rewriting and BH-R'
+[Grounding Fusion] lexical=0.000 semantic=0.283 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.300]'
+question type=<class 'str'> value='Does the BAP sublayer use configured mapping to derive an egress BH RLC channel from the ingress BH RLC channel when routing a packet from ingress to egress?'
+context_chunks type=<class 'list'>
+reranker_top=4.086027145385742
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.300]'
+context_chunks len=9
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 6.11.3 | Pages 70-71]\n6.11.3 Routing, BAP Header Rewriting and BH-R'
+[Confidence] normalized=1.000 rec=1.000 kw=0.818 qa_rel=0.283 → 0.686
+[QA] Done in 70.7s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.686 | decision=accepted
+
+----------------------------------------------------------------------
+END q020 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q021 | RUN 4
+TIME: 2026-08-17 19:23:52
+QUESTION: What is the price of a 5G smartphone according to TS 38.331?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'What is the price of a 5G smartphone according to TS 38.331?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['What is the price of a 5G smartphone according to TS 38.331?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'What is the price of a 5G smartphone according to ' → 8 exact chunks | top score=7
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'What is the price of a 5G smartphone according to ' → 8 chunks | top score=0.241
+[Hybrid] 22 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (3) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=-2.182 | margin=3.0 | bottom kept=-4.972
+[ExactMatch] 'What is the price of a 5G smartphone according to ' → 8 exact chunks | top score=7
+[Protect] Injecting 8 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 16 chunks
+[Recall@16] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.331'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.331'
+[Citation Guard] ⚠️ Refusal detected → abstaining
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the provided 3GPP specifications.'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.3.2 | Pages 190-391]\n6.3.2 Radio resource control information ele'
+[Grounding Fusion] lexical=0.000 semantic=0.460 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.'
+question type=<class 'str'> value='What is the price of a 5G smartphone according to TS 38.331?'
+context_chunks type=<class 'list'>
+reranker_top=-2.1817100048065186
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.3.2 | Pages 190-391]\n6.3.2 Radio resource control information ele'
+[Confidence] normalized=1.000 rec=1.000 kw=0.750 qa_rel=0.283 → 0.676
+[QA] Done in 186.6s | model=llama_direct | grounding=46.0% | recall=100.0% | confidence=0.676 | decision=not_found
+
+----------------------------------------------------------------------
+END q021 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q022 | RUN 4
+TIME: 2026-08-17 19:26:59
+QUESTION: How many hours of battery life does the UE provide in RRC_IDLE, according to TS 38.331?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'How many hours of battery life does the UE provide in RRC_IDLE, according to TS 38.331?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['How many hours of battery life does the UE provide in RRC_IDLE, according to TS 38.331?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'How many hours of battery life does the UE provide' → 8 exact chunks | top score=9
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'How many hours of battery life does the UE provide' → 8 chunks | top score=0.215
+[Hybrid] 23 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] 8 → 8 chunks after pruning | top=1.352 | margin=3.0 | bottom kept=-1.595
+[ExactMatch] 'How many hours of battery life does the UE provide' → 8 exact chunks | top score=9
+[Protect] Injecting 8 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 16 chunks
+[Recall@16] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.331'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.331'
+[Citation Guard] ⚠️ Refusal detected → abstaining
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the provided 3GPP specifications.'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 11 | Pages 140-145]\n11 UE Power Saving\n. UE power saving in RRC_IDL'
+[Grounding Fusion] lexical=0.000 semantic=0.292 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.'
+question type=<class 'str'> value='How many hours of battery life does the UE provide in RRC_IDLE, according to TS 38.331?'
+context_chunks type=<class 'list'>
+reranker_top=1.351658582687378
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 11 | Pages 140-145]\n11 UE Power Saving\n. UE power saving in RRC_IDL'
+[Confidence] normalized=1.000 rec=1.000 kw=0.750 qa_rel=0.120 → 0.611
+[QA] Done in 274.3s | model=llama_direct | grounding=29.2% | recall=100.0% | confidence=0.611 | decision=not_found
+
+----------------------------------------------------------------------
+END q022 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q023 | RUN 4
+TIME: 2026-08-17 19:31:33
+QUESTION: Which chipset manufacturer does TS 38.331 specify for the UE?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Which chipset manufacturer does TS 38.331 specify for the UE?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Which chipset manufacturer does TS 38.331 specify for the UE?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Which chipset manufacturer does TS 38.331 specify ' → 8 exact chunks | top score=18
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Which chipset manufacturer does TS 38.331 specify ' → 8 chunks | top score=0.157
+[Hybrid] 22 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (7) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=3.533 | margin=3.0 | bottom kept=1.099
+[ExactMatch] 'Which chipset manufacturer does TS 38.331 specify ' → 8 exact chunks | top score=18
+[Protect] Injecting 8 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 16 chunks
+[Recall@16] oracle=0.511 | best_retrieved=0.482 | score=94.2%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.'
+[QA] Answer: 'This information is not present in the document.'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.'
+[Citation Guard] ⚠️ Refusal detected → abstaining
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the provided 3GPP specifications.'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.3.3 | Pages 392-434]\n6.3.3 UE capability information elements\n. T'
+[Grounding Fusion] lexical=0.000 semantic=0.406 recall=94.2
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.'
+question type=<class 'str'> value='Which chipset manufacturer does TS 38.331 specify for the UE?'
+context_chunks type=<class 'list'>
+reranker_top=3.533029079437256
+recall_score=94.2
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.3.3 | Pages 392-434]\n6.3.3 UE capability information elements\n. T'
+[Confidence] normalized=1.000 rec=0.942 kw=0.875 qa_rel=0.231 → 0.662
+[QA] Done in 214.8s | model=llama_direct | grounding=40.6% | recall=94.2% | confidence=0.662 | decision=not_found
+
+----------------------------------------------------------------------
+END q023 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q024 | RUN 4
+TIME: 2026-08-17 19:35:08
+QUESTION: Does TS 38.331 mandate AES-512 as the ciphering algorithm for SRBs?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does TS 38.331 mandate AES-512 as the ciphering algorithm for SRBs?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does TS 38.331 mandate AES-512 as the ciphering algorithm for SRBs?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Does TS 38.331 mandate AES-512 as the ciphering al' → 8 exact chunks | top score=20
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does TS 38.331 mandate AES-512 as the ciphering al' → 8 chunks | top score=0.277
+[Hybrid] 17 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (5) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=4.884 | margin=3.0 | bottom kept=3.821
+[ExactMatch] 'Does TS 38.331 mandate AES-512 as the ciphering al' → 8 exact chunks | top score=20
+[Protect] Injecting 5 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 13 chunks
+[Recall@13] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\nSource: TS 38.331'
+[QA] Answer: 'This information is not present in the document.
+
+Source: TS'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\nSource: TS 38.331'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.331'
+context_chunks len=13
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.3.2 | Pages 190-391]\n6.3.2 Radio resource control information ele'
+[Grounding Fusion] lexical=0.000 semantic=0.352 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.331'
+question type=<class 'str'> value='Does TS 38.331 mandate AES-512 as the ciphering algorithm for SRBs?'
+context_chunks type=<class 'list'>
+reranker_top=4.884474277496338
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\nSource: TS 38.331'
+context_chunks len=13
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.3.2 | Pages 190-391]\n6.3.2 Radio resource control information ele'
+[Confidence] normalized=1.000 rec=1.000 kw=0.636 qa_rel=0.352 → 0.686
+[QA] Done in 287.2s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.686 | decision=accepted
+
+----------------------------------------------------------------------
+END q024 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q025 | RUN 4
+TIME: 2026-08-17 19:39:55
+QUESTION: Does TS 38.331 define an RRC_SLEEP state in addition to RRC_IDLE, RRC_INACTIVE, and RRC_CONNECTED?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does TS 38.331 define an RRC_SLEEP state in addition to RRC_IDLE, RRC_INACTIVE, and RRC_CONNECTED?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does TS 38.331 define an RRC_SLEEP state in addition to RRC_IDLE, RRC_INACTIVE, and RRC_CONNECTED?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Does TS 38.331 define an RRC_SLEEP state in additi' → 8 exact chunks | top score=20
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does TS 38.331 define an RRC_SLEEP state in additi' → 8 chunks | top score=0.261
+[Hybrid] 23 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (5) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=5.575 | margin=3.0 | bottom kept=2.707
+[ExactMatch] 'Does TS 38.331 define an RRC_SLEEP state in additi' → 8 exact chunks | top score=20
+[Protect] Injecting 8 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 16 chunks
+[Recall@16] ✅ Oracle chunk retrieved! score=100%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\n[Source: TS 38.331]'
+[QA] Answer: 'This information is not present in the document.
+
+[Source: T'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\n[Source: TS 38.331]'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.331]'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.2.2 | Pages 135-176]\n6.2.2 Message definitions\n. suspendConfig In'
+[Grounding Fusion] lexical=0.000 semantic=0.344 recall=100.0
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.331]'
+question type=<class 'str'> value='Does TS 38.331 define an RRC_SLEEP state in addition to RRC_IDLE, RRC_INACTIVE, and RRC_CONNECTED?'
+context_chunks type=<class 'list'>
+reranker_top=5.57507848739624
+recall_score=100.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.331]'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.2.2 | Pages 135-176]\n6.2.2 Message definitions\n. suspendConfig In'
+[Confidence] normalized=1.000 rec=1.000 kw=0.909 qa_rel=0.344 → 0.724
+[QA] Done in 277.5s | model=llama_direct | grounding=100.0% | recall=100.0% | confidence=0.724 | decision=accepted
+
+----------------------------------------------------------------------
+END q025 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q026 | RUN 4
+TIME: 2026-08-17 19:44:33
+QUESTION: Who is the current chairman of the 3GPP RAN2 working group, according to TS 38.331?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Who is the current chairman of the 3GPP RAN2 working group, according to TS 38.331?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Who is the current chairman of the 3GPP RAN2 working group, according to TS 38.331?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Who is the current chairman of the 3GPP RAN2 worki' → 8 exact chunks | top score=9
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Who is the current chairman of the 3GPP RAN2 worki' → 8 chunks | top score=0.200
+[Hybrid] 23 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (7) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=-2.210 | margin=3.0 | bottom kept=-5.158
+[ExactMatch] 'Who is the current chairman of the 3GPP RAN2 worki' → 8 exact chunks | top score=9
+[Protect] Injecting 8 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 16 chunks
+[Recall@16] oracle=0.492 | best_retrieved=0.472 | score=96.1%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.'
+[QA] Answer: 'This information is not present in the document.'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.'
+[Citation Guard] ⚠️ Refusal detected → abstaining
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the provided 3GPP specifications.'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.3.5.6.2]\n5.3.5.6.2 SRB release\nThe UE shall: 1> release the PDCP '
+[Grounding Fusion] lexical=0.000 semantic=0.568 recall=96.1
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.'
+question type=<class 'str'> value='Who is the current chairman of the 3GPP RAN2 working group, according to TS 38.331?'
+context_chunks type=<class 'list'>
+reranker_top=-2.2097268104553223
+recall_score=96.1
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 5.3.5.6.2]\n5.3.5.6.2 SRB release\nThe UE shall: 1> release the PDCP '
+[Confidence] normalized=1.000 rec=0.961 kw=0.750 qa_rel=0.183 → 0.628
+[QA] Done in 260.8s | model=llama_direct | grounding=56.8% | recall=96.1% | confidence=0.628 | decision=not_found
+
+----------------------------------------------------------------------
+END q026 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q027 | RUN 4
+TIME: 2026-08-17 19:48:54
+QUESTION: Does TS 38.300 specify a maximum of 10,000 UEs per cell?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Does TS 38.300 specify a maximum of 10,000 UEs per cell?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Does TS 38.300 specify a maximum of 10,000 UEs per cell?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Does TS 38.300 specify a maximum of 10,000 UEs per' → 8 exact chunks | top score=23
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Does TS 38.300 specify a maximum of 10,000 UEs per' → 8 chunks | top score=0.157
+[Hybrid] 23 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (5) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=1.579 | margin=3.0 | bottom kept=-1.203
+[ExactMatch] 'Does TS 38.300 specify a maximum of 10,000 UEs per' → 8 exact chunks | top score=23
+[Protect] Injecting 8 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 16 chunks
+[Recall@16] oracle=0.577 | best_retrieved=0.567 | score=98.3%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → VERIFICATION_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\n[Source: TS 38.300]'
+[QA] Answer: 'This information is not present in the document.
+
+[Source: T'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\n[Source: TS 38.300]'
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.300]'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.3.2 | Pages 190-391]\n6.3.2 Radio resource control information ele'
+[Grounding Fusion] lexical=0.000 semantic=0.361 recall=98.3
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.300]'
+question type=<class 'str'> value='Does TS 38.300 specify a maximum of 10,000 UEs per cell?'
+context_chunks type=<class 'list'>
+reranker_top=1.579378366470337
+recall_score=98.3
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.\n\n[Source: TS 38.300]'
+context_chunks len=16
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.331]\n[3GPP Clause 6.3.2 | Pages 190-391]\n6.3.2 Radio resource control information ele'
+[Confidence] normalized=1.000 rec=0.983 kw=0.818 qa_rel=0.361 → 0.714
+[QA] Done in 276.3s | model=llama_direct | grounding=98.3% | recall=98.3% | confidence=0.714 | decision=accepted
+
+----------------------------------------------------------------------
+END q027 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q028 | RUN 4
+TIME: 2026-08-17 19:53:30
+QUESTION: What is the cost of UPF hardware, according to TS 38.300?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'What is the cost of UPF hardware, according to TS 38.300?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['What is the cost of UPF hardware, according to TS 38.300?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'What is the cost of UPF hardware, according to TS ' → 8 exact chunks | top score=8
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'What is the cost of UPF hardware, according to TS ' → 8 chunks | top score=0.203
+[Hybrid] 22 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (5) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=-2.435 | margin=3.0 | bottom kept=-5.260
+[ExactMatch] 'What is the cost of UPF hardware, according to TS ' → 8 exact chunks | top score=8
+[Protect] Injecting 7 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 15 chunks
+[Recall@15] oracle=0.418 | best_retrieved=0.391 | score=93.5%
+[QA] ✅ High recall — trusting retrieved context
+[Routing] Context-based → FACTUAL_QA
+[QA] ⚡ Direct QA (no ReAct)
+
+[DEBUG RAW LLM OUTPUT]
+type=<class 'str'>
+value='This information is not present in the document.\n\n[Source: TS 38.300]'
+[QA] Answer: 'This information is not present in the document.
+
+[Source: T'
+[DEBUG] react_ans before refusal check: repr='This information is not present in the document.\n\n[Source: TS 38.300]'
+[Citation Guard] ⚠️ Refusal detected → abstaining
+[Grounding] Refusal answer detected → returning sentinel 75.0
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the provided 3GPP specifications.'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 5.4.2]\n5.4.2 Supplementary Uplink\nIn conjunction with a UL/DL carri'
+[Grounding Fusion] lexical=0.000 semantic=0.519 recall=93.5
+
+[DEBUG CONFIDENCE INPUTS]
+answer type=<class 'str'> value='This information is not present in the document.'
+question type=<class 'str'> value='What is the cost of UPF hardware, according to TS 38.300?'
+context_chunks type=<class 'list'>
+reranker_top=-2.4351017475128174
+recall_score=93.5
+
+[DEBUG SEMANTIC]
+answer type=<class 'str'> value='This information is not present in the document.'
+context_chunks len=15
+first chunk type=<class 'str'>
+first chunk preview='[Source: TS 38.300]\n[3GPP Clause 5.4.2]\n5.4.2 Supplementary Uplink\nIn conjunction with a UL/DL carri'
+[Confidence] normalized=1.000 rec=0.935 kw=0.875 qa_rel=0.185 → 0.642
+[QA] Done in 127.2s | model=llama_direct | grounding=51.9% | recall=93.5% | confidence=0.642 | decision=not_found
+
+----------------------------------------------------------------------
+END q028 | RUN 4
+----------------------------------------------------------------------
+
+======================================================================
+QUESTION q029 | RUN 4
+TIME: 2026-08-17 19:55:37
+QUESTION: Which programming language does TS 38.300 require for implementing the gNB software?
+======================================================================
+
+[DEBUG STATE]
+original_question = 'Which programming language does TS 38.300 require for implementing the gNB software?'
+session_id = None
+[QA] ✅ Using precomputed FAISS index (fixed corpus mode)
+[QA] START | 1984 chunks
+[Hybrid] 1 queries: ['Which programming language does TS 38.300 require for implementing the gNB software?']
+[Hybrid] 8 unique chunks after semantic
+[ExactMatch] 'Which programming language does TS 38.300 require ' → 8 exact chunks | top score=19
+[Hybrid] 8 exact-match chunks boosted to 0.6
+[KeywordSearch] 'Which programming language does TS 38.300 require ' → 8 chunks | top score=0.173
+[Hybrid] 24 total unique chunks across all signals
+[Hybrid] Final pool: 8 chunks | top weight=0.6
+[Reranker] ⚠️ Too few chunks after pruning (7) → expanding
+[Reranker] 8 → 8 chunks after pruning | top=4.018 | margin=3.0 | bottom kept=1.121
+[ExactMatch] 'Which programming language does TS 38.300 require ' → 8 exact chunks | top score=19
+[Protect] Injecting 8 exact-match chunks dropped by reranker
+[Protect] Context expanded: 8 → 16 chunks
