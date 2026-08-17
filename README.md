@@ -17,12 +17,11 @@ The current knowledge base contains:
 - Sentence-Transformer embeddings
 - Cross-encoder reranking
 - Exact-match protection for technical terms, clauses, and numerical values
-- Adaptive retrieval and query rewriting
+- Adaptive retrieval 
 - LLaMA 3.2 through Ollama
 - Grounded answer generation with source citations
 - Citation and grounding validation
 - Hallucination / abstention detection
-- Conversational memory and follow-up question handling
 - RAPTOR-style document summarization
 - Flask REST API
 - Streaming responses using Server-Sent Events
@@ -33,52 +32,48 @@ The current knowledge base contains:
 
 ## Architecture
 
-    User Question
-          |
-          v
-    Flask /ask API
-          |
-          v
-    Query Processing
-    & Classification
-          |
-          v
-    Hybrid Retrieval
-      |       |       |
-      |       |       +--> TF-IDF Retrieval
-      |       +----------> Exact-Match Retrieval
-      +------------------> FAISS Semantic Retrieval
-          |
-          v
-    Cross-Encoder Reranking
-          |
-          v
-    Exact-Match Protection
-          |
-          v
-    Grounded Context
-          |
-          +----------------------+
-          |                      |
-          v                      v
-      Direct QA            ReAct Fallback
-          |                      |
-          +----------+-----------+
-                     |
-                     v
-              LLaMA 3.2
-              via Ollama
-                     |
-                     v
-        Citation / Grounding Guard
-                     |
-                     v
-        Hallucination Protection
-                     |
-                     v
-              Final Answer
-                     |
-                     v
+    User
+    |
+    v
+    Flask API
+    |
+    +--------------------+
+    |                    |
+    v                    v
+    /ask                /evaluate
+    |                    |
+    v                    v
+    QA + Validation    LangGraph Workflow
+    |                    |
+    |              +-----+------+
+    |              |            |
+    |           Extract       Chunk
+    |              |            |
+    |              +-----+------+
+    |                    |
+    |              Query-Type Routing
+    |                 /          \
+    |                /            \
+    |          Summarization       QA
+    |                                |
+    |                         Retrieval
+    |                                |
+    |                         Reranking
+    |                                |
+    |                    Exact-Match Protection
+    |                                |
+    |                       Direct QA / ReAct
+    |                                |
+    |                              LLaMA
+    |                                |
+    |                           Validation
+    |                                |
+    +---------------+----------------+
+                    |
+                    v
+                Final Answer
+                    |
+                    v
                 Metrics
 
 ---
@@ -205,7 +200,7 @@ The system supports different question types, including:
 - Multipart QA
 - Full-document summarization
 
-The system also supports follow-up questions through conversational context and query rewriting.
+The system supports factual, verification, multipart, and summarization questions.
 
 ---
 
@@ -270,32 +265,6 @@ The configured RAPTOR batch size is:
 
     RAPTOR_BATCH_CHARS = 15000
 
----
-
-## Conversational Memory
-
-Session-based conversational memory is supported for follow-up questions.
-
-Previous conversation can help clarify user intent, but it is not treated as independent factual evidence.
-
-Factual claims must still be supported by the retrieved 3GPP context.
-
----
-
-## Query Rewriting
-
-When additional retrieval is useful, the system can generate alternative search queries while preserving the meaning of the original question.
-
-Rewrite information can be recorded for evaluation, including:
-
-    rewrite_triggered
-    rewritten_query
-    pre_rewrite_docs
-    post_rewrite_docs
-
-This allows retrieval performance before and after rewriting to be compared.
-
----
 
 ## Technology Stack
 
@@ -330,26 +299,11 @@ Returns backend and runtime status.
 
 ### POST /ask
 
-Main question-answering endpoint.
+Main question-answering endpoint for document-grounded responses.
 
-Example request:
+    POST /ask
 
-    {
-      "question": "Which RRC state is the UE in when no RRC connection is established?"
-    }
-
-Example response structure:
-
-    {
-      "answer": "...",
-      "metrics": {
-        "confidence_score": "...",
-        "answer_grounding": "...",
-        "recall_at_k": "...",
-        "e2e_latency_sec": "..."
-      },
-      "rewritten_query": null
-    }
+The endpoint accepts a user question and returns the generated answer together with the associated response metrics.
 
 The exact metric values depend on the query and retrieved context.
 
@@ -383,7 +337,7 @@ Linux/macOS:
 
 ### 2. Install dependencies
 
-    pip install -r requirements.txt
+    pip install -r dco_mind/requirements.txt
 
 The project requires:
 
@@ -461,7 +415,7 @@ The hallucination subset contains:
 | Failed | 4 / 40 |
 | Accuracy | 90.0% |
 | Hallucination Tests | 20 |
-| Automatically Detected | 18 / 20 |
+| Detected | 18 / 20 |
 | Average Recall@K | 99.0% |
 | Average Grounding | 79.7% |
 | Average Confidence | 76.2% |
@@ -472,11 +426,24 @@ The hallucination subset contains:
 The automated evaluator reported:
 
     18 / 20 detected
-    90.0% hallucination detection rate
+    2 / 20 failed to detect
 
-One of the reported failures, Q035, was manually reviewed.
+The two hallucination-test failures were:
 
-The Q035 question is:
+    Q031
+    Q035
+
+#### Q031
+
+Question:
+
+    What is the recommended height of a gNB antenna tower, according to TS 38.300?
+
+The generated response answered with the typical vertical altitude of an Air-to-Ground (ATG) network, around 10,000 m. This does not answer the requested antenna-tower-height question and was correctly classified as a hallucination failure.
+
+#### Q035
+
+Question:
 
     Does TS 38.331 define a timer named T999?
 
@@ -484,13 +451,14 @@ The generated response was:
 
     No, TS 38.331 does not define a timer named T999.
 
-This response correctly states that T999 is not defined in TS 38.331 and does not hallucinate a T999 timer.
+This response correctly states that T999 is not defined in TS 38.331 and does not hallucinate the existence of a T999 timer.
 
 The automated evaluator nevertheless classified Q035 as a failure. This was identified as an evaluation/benchmark-labeling mismatch rather than an incorrect technical answer.
 
 The raw automated evaluation result is retained for transparency.
 
 ---
+
 ## Evaluation Metrics
 
 ### Recall@K
@@ -547,11 +515,13 @@ The 40-question evaluation summary showing overall accuracy, hallucination-test 
 
 ## Project Structure
 
+
     Mavenir-3GPP-RAG2/
     |
     +-- dco_mind/
     |   |
     |   +-- app.py
+    |   +-- requirements.txt
     |   |
     |   +-- config/
     |   |   +-- settings.py
@@ -561,7 +531,6 @@ The 40-question evaluation summary showing overall accuracy, hallucination-test 
     |   |   +-- state.py
     |   |
     |   +-- cognition/
-    |   |   +-- memory.py
     |   |   +-- query_brain.py
     |   |
     |   +-- knowledge/
@@ -582,23 +551,46 @@ The 40-question evaluation summary showing overall accuracy, hallucination-test 
     |   +-- generation/
     |   |   +-- response_generator.py
     |   |
+    |   +-- interface/
+    |   |   +-- api_routes.py
+    |   |
     |   +-- evaluation/
     |   |   +-- metrics.py
     |   |   +-- stability_runner.py
     |   |   +-- results/
+    |   |       +-- rag_results_40_1.json
+    |   |       +-- rag_results_40_2.json
+    |   |       +-- rag_results_40_3.json
+    |   |       +-- rag_results_40_5.json
+    |   |       +-- run_logs_40.txt
+    |   |       +-- backend_logs/
+    |   |           +-- rag_backend_40_4.log
+    |   |           +-- rag_backend_40_5.log
     |   |
     |   +-- events/
     |   |   +-- events.py
     |   |
     |   +-- datasets/
+    |       +-- rag_eval_dataset_40_grounded.json
     |       +-- 3gpp/
     |           +-- 38_300_extracted.txt
     |           +-- 38_331_extracted.txt
+    |           +-- ts_138300v190000p.pdf
+    |           +-- ts_138331v150900p.pdf
     |
-    +-- frontend/
+    +-- demo_output_images/
+    |   +-- sample_output_images/
+    |   |   +-- Screenshot (2199).png
+    |   |   +-- Screenshot 2026-08-15 220534.png
+    |   |   +-- Screenshot 2026-08-15 220553.png
+    |   |
+    |   +-- summary_metrics/
+    |       +-- Screenshot 2026-08-17 222549.png
     |
-    +-- requirements.txt
+    +-- frontend-react/
     |
+    +-- .gitignore
+    +-- LICENSE
     +-- README.md
 
 ---
@@ -627,7 +619,7 @@ The 40-question evaluation summary showing overall accuracy, hallucination-test 
 
 DCO MIND provides an end-to-end document-grounded RAG pipeline for technical 3GPP question answering.
 
-The system combines clause-aware ingestion, hybrid retrieval, reranking, grounded LLM generation, citation validation, hallucination protection, conversational context, and automated evaluation.
+The system combines clause-aware ingestion, hybrid retrieval, reranking, grounded LLM generation, citation validation, hallucination protection, and automated evaluation.
 
 The latest evaluation consists of 40 questions and achieved:
 
@@ -639,6 +631,6 @@ The hallucination subset contains 20 test questions. The automated evaluator det
     18 / 20
     90.0% hallucination detection rate
 
-One reported failure, Q035, was manually reviewed. The generated response correctly stated that T999 is not defined in TS 38.331, so this case was identified as an evaluation/benchmark mismatch rather than a hallucinated technical answer.
+Two hallucination-test failures were reported: Q031 and Q035. Q031 was a genuine hallucination failure. Q035 was manually reviewed, and the generated response correctly stated that T999 is not defined in TS 38.331. This case was therefore identified as an evaluation/benchmark mismatch rather than a hallucinated technical answer.
 
 The raw automated evaluation output is retained for transparency, while the manually reviewed Q035 case is documented as an evaluator-side mismatch.
